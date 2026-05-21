@@ -1,0 +1,6 @@
+1,John,IT,5000
+2,Alice,HR,4500
+3,Bob,Finance,6000
+4,David,IT,5500
+5,Emma,Sales,4000
+6,John,IT,5000

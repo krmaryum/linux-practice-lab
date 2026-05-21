@@ -1,0 +1,6 @@
+Linux is powerful.
+Linux is secure.
+Linux is fast.
+Practice makes perfect.
+Commands are important.
+Automation saves time.
