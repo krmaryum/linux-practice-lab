@@ -115,93 +115,257 @@ bash linux-practice.sh
 
 ```bash
 pwd
-ls
-cd
 whoami
 date
+ls
+ls -ltr
+clear
+cd files
+cd ..
 ```
 
-## File Management
+## File Management (Creation & Deletion)
 
 ```bash
-touch
-mkdir
-rm
-cp
-mv
-find
+touch files/test.txt
+
+rm files/test.txt
+
+mkdir testdir
+
+rmdir testdir
+```
+
+## Copy / Move / Rename
+```bash
+cp files/story.txt backup/
+
+mv files/story.txt files/newstory.txt
+
+mv files/newstory.txt files/story.txt
 ```
 
 ## File Viewing
 
 ```bash
-cat
-less
-more
-head
-tail
+cat files/story.txt
+
+less files/story.txt
+
+more files/story.txt
+
+head -3 files/story.txt
+
+tail -2 files/story.txt
 ```
 
-## Text Processing
+## Search Commands
 
 ```bash
-grep
-egrep
-awk
-cut
-sed
-tr
-sort
-uniq
-wc
+grep "Linux" files/story.txt
+
+egrep "ERROR|WARNING" logs/system.log
+
+find ~/linux-practice -name "*.txt"
 ```
 
-## Compression
+## Sorting & Unique
 
+```bash
+sort files/fruits.txt
+
+sort files/fruits.txt | uniq
+```
+
+## Count Lines
+
+```bash
+wc -l files/fruits.txt
+```
+
+## Shuffle
+
+```bash
+shuf files/fruits.txt
+```
+
+## Split File
+
+```bash
+split -l 5 files/numbers.txt split_
+```
+
+## Compare Files
+
+```bash
+cp files/story.txt files/story2.txt
+
+cmp files/story.txt files/story2.txt
+
+diff files/story.txt files/story2.txt
+```
+
+## Copy / Move / Rename
+
+```bash
+cp files/story.txt backup/
+
+mv files/story.txt files/newstory.txt
+
+mv files/newstory.txt files/story.txt
+```
+
+## Find Files
+
+```bash
+find ~/linux-practice -name "*.txt"
+```
+
+## AWK Practice
+Print second column:
+```bash
+awk -F "," '{print $2}' data/students.csv
+```
+
+## CUT Practice
+
+```bash
+cut -c1-5 files/story.txt
+```
+
+## SED Practice
+Print line 2:
+```bash
+sed -n '2p' files/story.txt
+```
+Replace word:
+```bash
+sed 's/Linux/UNIX/g' files/story.txt
+```
+
+## TR Practice
+Uppercase:
+```bash
+tr '[:lower:]' '[:upper:]' < files/story.txt
+```
+
+## FOLD Practice
+```bash
+echo "ABCDEFGHIJK" | fold -w1
+```
+
+## Compression Practice
 ```bash
 gzip
-gunzip
-tar
-zip
-unzip
+gzip files/story.txt
+
+gunzip files/story.txt.gz
 ```
 
-## Permissions
-
+## tar
 ```bash
-chmod
-chown
-chgrp
+tar -czf backup.tar.gz compress_me/
+
+tar -xzf backup.tar.gz
 ```
 
-## Process Management
-
+## zip
 ```bash
-ps
+zip files.zip files/fruits.txt files/story.txt
+
+unzip -l files.zip
+```
+
+## Process Practice
+Run process in background:
+```bash
+sleep 300 &
+```
+Check jobs:
+```bash
 jobs
-kill
-pkill
+```
+Foreground / Background:
+```bash
 bg
+
 fg
 ```
 
-## Networking
-
+## Kill process:
 ```bash
-ping
-curl
-wget
+ps -ef | grep sleep
+
+pkill sleep
 ```
 
 ## System Information
-
 ```bash
 hostname
+
 uname -a
+
 lscpu
+
 free -h
+
 df -h
-du -sh
+
+du -sh ~/linux-practice
+```
+
+## Networking Practice
+```bash
+ping google.com
+
+curl http://numbersapi.com/random
+
+wget https://example.com
+```
+
+## Environment Variables
+```bash
+export MYNAME="Khalid"
+
+echo $MYNAME
+
+printenv
+```
+
+## Alias Practice
+```bash
+alias ll='ls -ltr'
+
+ll
+```
+
+## Scheduling Practice
+```bash
+crontab -e
+```
+Example cron:
+```text
+* * * * * echo "Hello" >> ~/linux-practice/logs/cron.log
+```
+
+## User Management
+```bash
+sudo useradd testuser
+
+sudo passwd testuser
+
+id testuser
+
+sudo userdel testuser
+```
+
+## Permissions
+```bash
+chmod 755 files/story.txt
+
+chown $USER files/story.txt
+
+chgrp $USER files/story.txt
 ```
 
 ---
@@ -224,16 +388,18 @@ This project helps you learn:
 
 # 📚 Recommended Practice Order
 
+Practice in this order:
+
 1. Navigation Commands
 2. File Management
-3. File Viewing
+3. Text Processing
 4. Search Commands
-5. Text Processing
+5. Compression
 6. Permissions
-7. Compression
+7. Process Management
 8. Networking
-9. Process Management
-10. Shell Scripting
+9. Automation
+10. User Management
 
 ---
 
