@@ -390,16 +390,16 @@ This project helps you learn:
 
 Practice in this order:
 
-Navigation Commands
-File Management
-Text Processing
-Search Commands
-Compression
-Permissions
-Process Management
-Networking
-Automation
-User Management
+1. Navigation Commands
+2. File Management
+3. Text Processing
+4. Search Commands
+5. Compression
+6. Permissions
+7. Process Management
+8. Networking
+9. Automation
+10. User Management
 
 ---
 
