@@ -10,7 +10,7 @@ https://www.youtube.com/watch?v=Byx4sgLR88E
 
 Linux, Cloud, and DevOps-related tech videos in Hindi.
 
-### 📖 About the Creator
+### 📖 About the Instructor
 
 By profession: **Manager + Team Lead (Tech Support Manager)**
 
@@ -18,7 +18,7 @@ The purpose of creating videos is to share knowledge, experience, and guidance r
 
 The creator focuses on helping students and learners improve their technical skills with proper guidance and practical learning.
 
-### 🔗 Creator Links
+### 🔗 Instructor Links
 
 - 📧 Email: mprashant.ofcl@gmail.com
 - 📸 Instagram: https://instagram.com/mprashant.codes
